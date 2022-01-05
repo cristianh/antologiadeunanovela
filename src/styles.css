@@ -460,10 +460,6 @@ span {
   align-items: center;
   align-content: center;
   flex-direction: column;
-  background-image: url(../assets/img/fondo.gif);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
@@ -496,6 +492,10 @@ span {
   align-items: center;
   align-content: center;
   flex-direction: column;
+  background-image: url(../assets/img/fondo.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
