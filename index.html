@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Regiones Naturales de América</title>
+	<link rel="preload" href="styles.css" as="styles">
+	<link rel="preload" href="script.js" as="script">
+	<link rel="stylesheet" href="./src/animate.min.css">
+	<script src="./src/gsap.min.js" type="text/javascript"></script>
+	<!-- <script src="./src/TweenMax.min.js" type="text/javascript"></script> -->
+	<link rel="stylesheet" href="./src/styles.css">
+	<!-- Production -->
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+</head>
+
+<body onLoad="init()">
+	<div style="position: absolute;top: 0px;z-index: 1;">
+		<img src="./assets/img/logo.png" alt="logo: escuela nueva">
+	</div>
+	<div style="position: absolute;top: 21px;right:10px;z-index: 1;">
+		<div class="descripcion-actividad-mobile" onclick="monstrarIntruccionesMobile()">
+			<img src="./assets/img/interrogacion.png" class="responsive" style="width:40px">
+		</div>
+	</div>
+	<div style="position: absolute;top: 90%;left:10px;z-index: 1;">
+		<div>
+			<div class="zoomIn">
+				+
+			</div>
+			<div class="zoomOut">
+				-
+			</div>
+		</div>
+	</div>
+	<div style="position: absolute;top: 90%;right:15px;z-index: 1;">
+		<div style="display: grid;justify-content: space-between;width: 153px;grid-template-columns: 1fr 1fr 1fr;">
+			<div></div>
+			<div class="UpZoom">
+				<img src="./assets/img/top.png" width="15px">
+			</div>
+			<div></div>
+			<div class="LeftZoom">
+				<img src="./assets/img/left.png" width="15px">
+			</div>
+			<div class="DownZoom">
+				<img src="./assets/img/down.png" width="15px">
+			</div>
+			<div class="RigthZoom">
+				<img src="./assets/img/rigth.png" width="15px">
+			</div>
+		</div>
+	</div>
+	<div id="titulo-alternativo" style="position: absolute;top: 10px;right:12px;z-index: 1;">
+		<img src="./assets/Img/titulo.png" alt="logo: escuela nueva">
+	</div>
+	<div id="myModalMapa" class="modal-mapa">
+
+		<!-- Modal content -->
+		<div class="modal-content-mapa">
+			<div class="instrucciones-mapa">
+				<div>
+					Utiliza las herramientas para desplazarte por el mapa:
+				</div>
+				<div class="item-instruccion">
+					<div>
+						<div style="width: 153px;display: flex;flex-direction: column;align-items: center;">
+							<p><b>Acercarte</b> o <b>Alejarte</b></p><br>
+							<div class="zoomInInstru">
+								+
+							</div>
+							<div class="zoomOutInstru">
+								-
+							</div>
+						</div>
+					</div>
+					<div style="
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				">
+						<p><b>Arriba</b> - <b>Abajo</b> - <b>Izquierda</b> - <b>Derecha</b></p><br>
+						<div
+							style="display: grid;justify-content: space-between;width: 153px;grid-template-columns: 1fr 1fr 1fr;height: 12vh;">
+							<div></div>
+							<div class="UpZoomInstru">
+								<img src="./assets/img/top.png" width="15px">
+							</div>
+							<div></div>
+							<div class="LeftZoomInstru">
+								<img src="./assets/img/left.png" width="15px">
+							</div>
+							<div class="DownZoomInstru">
+								<img src="./assets/img/down.png" width="15px">
+							</div>
+							<div class="RigthZoomInstru">
+								<img src="./assets/img/rigth.png" width="15px">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div id="autorA-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Rudyard Kipling</span>
+						</div>
+						<div style="color: brown;">
+							(1865 - 1936 Bombay, India)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Fue un escritor y poeta británico nacido en la India. Autor de relatos, cuentos infantiles,
+							novelista y poeta, se le recuerda por sus relatos y poemas sobre los soldados británicos en
+							la India y la defensa del imperialismo occidental, así como por sus cuentos infantiles. Se
+							destacan sus obras:</p>
+						<ul>
+							<li>Cuarteto (1884).</li>
+							<li>Cuentos de las colinas (1888).</li>
+							<li>De un mar a otro (1889).</li>
+							<li>La luz que se apaga (1891).</li>
+							<li>Mandalay (1892).</li>
+							<li>El libro de la selva (1894).</li>
+							<li>Los constructores de puentes (1898).</li>
+							<li>De mar a mar (1899).</li>
+							<li>Acción y reacción (1909).</li>
+							<li>El libro de las palabras (1928).</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="contenedor-pdf">
+					<a href="./assets/pdf/LosConstructores.pdf" target="_blank"><img src="./assets/img/pdf.svg"
+							class="imagen-pdf" alt="Descargar Pdf"> </a>
+					<p><b>Consultar Obra</b></p>
+				</div>
+			</div>
+			<div id="autorB-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Ray Bradbury</span>
+						</div>
+						<div style="color: brown;">
+							(1920 Illinois, Estados Unidos)
+						</div>
+					</div>
+					<div class="texto">
+
+						<p>Es un escritor del género fantástico, del terror y de la ciencia ficción. Principalmente
+							conocido por sus obras: </p>
+						<ul>
+							<li>Crónicas marcianas (1950).</li>
+							<li>Fahrenheit 451 (1953).</li>
+							<li>El vino del estío (1957).</li>
+							<li>La feria de las tinieblas (1962).</li>
+							<li>El árbol de las brujas (1972).</li>
+							<li>La muerte es un asunto solitario (1985).</li>
+							<li>Cementerio para lunáticos (1990).</li>
+							<li>El ruido de un Trueno (1990).</li>
+							<li>Sombras verdes, ballena blanca (1992).</li>
+							<li>El verano de la despedida (2006).</li>
+							<li>Ahora y siempre (2009).</li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+			<div id="autorB-incompleto-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Philip k. Dick</span>
+						</div>
+						<div style="color: brown;">
+							(1928 - 1982 Chicago, Estados Unidos)
+						</div>
+					</div>
+					<div class="texto">
+
+						<p>Fue un prolífico escritor y novelista de ciencia ficción, que influyó notablemente en
+							dicho género. Entre sus escritos tenemos: </p>
+						<ul>
+							<li>Lotería solar (1955).</li>
+							<li>El tiempo doblado (1956).</li>
+							<li>Planetas morales (1957).</li>
+							<li>Muñecos cósmicos (1957).</li>
+							<li>Tiempo desarticulado (1959).</li>
+							<li>El martillo de Vulcano (1960).</li>
+							<li>El hombre en el castillo (1962) .</li>
+							<li>Torneo mortal (1963).</li>
+							<li>Tiempo de Marte (1964).</li>
+							<li>Aguardando el año pasado (1966). </li>
+							<li>La pistola de rayos (1967).</li>
+							<li>El mundo contra reloj (1967).</li>
+							<li>¿Sueñan los androides con ovejas eléctricas (1968).</li>
+							<li>Laberinto de muerte (1970).</li>
+							<li>Podemos construirle (1972).</li>
+							<li>Fluyan mis lágrimas, dijo el policía (1974).</li>
+							<li>Una mirada a la oscuridad (1977).</li>
+							<li>La invasión divina (1981). </li>
+							<li>En busca de Milton Lumky (1985).</li>
+							<li>Humpty Dumpty in Oakland (1986).</li>
+							<li>Lies, Inc. (2004).</li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+			<div id="autorC-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Herman Melville</span>
+						</div>
+						<div style="color: brown;">
+							(1819 - 1891 Nueva York, Estados Unidos)
+						</div>
+					</div>
+					<div class="texto">
+
+						<p>Fue un prodigio de la novela, del ensayo y de la poesía.<br><br>
+							Sus principales obras son:</p>
+						<ul>
+							<li>Billy Budd (1924).</li>
+							<li>Typee (1846).</li>
+							<li>Mardi (1849).</li>
+							<li>Moby Dick (1851).</li>
+							<li>Omoo (1847).</li>
+							<li>Bartleby, el escribiente (1856).</li>
+							<li>Chaqueta blanca (1850).</li>
+						</ul>
+					</div>
+					<div class="contenedor-pdf">
+						<a href="./assets/pdf/BartlebyElEscribiente.pdf" target="_blank"><img src="./assets/img/pdf.svg"
+								class="imagen-pdf" alt="Descargar Pdf"> </a>
+						<p><b>Consultar Obra</b></p>
+					</div>
+
+				</div>
+			</div>
+			<div id="autorD-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Joseph Conrad</span>
+						</div>
+						<div style="color: brown;">
+							(1857 - 1924 Berdyczów, entonces Polonia, actual Ucrania)
+						</div>
+					</div>
+					<div class="texto">
+
+						<p>Fue un novelista polaco que adoptó el inglés como lengua literaria.<br><br>
+							Sus obras más importantes son:</p>
+						<ul>
+							<li>La locura de Almayer (Almayer'sFolly) (1895).</li>
+							<li>Una avanzada del progreso (An Outpost of Progress) (1896).</li>
+							<li>El negro del Narciso (The Nigger of the 'Narcissus') (1897).</li>
+							<li>El corazón de las tinieblas (Heart of Darkness) (1899).</li>
+							<li>Lord Jim (1900).</li>
+							<li>Los herederos (The Inheritors) (1901).con Ford Madox Ford</li>
+							<li>Tifón (Typhoon) (comenzado en 1899 y publicado en PallMall Magazine en 1902).</li>
+							<li>Con la soga al cuello "TheEnd of theTether" (1902).</li>
+							<li>Nostromo (1904).</li>
+							<li>El duelo (1907).</li>
+							<li>Bajo la mirada de Occidente (Under Western Eyes) (1911).</li>
+							<li>Crónica personal (A Personal Record) (1912).</li>
+							<li>Chance (1913).</li>
+							<li>Victoria (Victory) (1915).</li>
+							<li>La línea de sombra (The Shadow Line) (1917).</li>
+							<li>La flecha de oro (TheArrow of Gold) (1919).</li>
+							<li>Salvamento (TheRescue) (1920).</li>
+							<li>El pirata (TheRover) (1923).</li>
+							<li>El alma del guerrero (TheWarrior'sSoul) (1925).</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="autorE-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Stanislaw Lem</span>
+						</div>
+						<div style="color: brown;">
+							(1921 - 2006 Lwów, entonces Polonia, actual Ucrania)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Fue un escritor polaco cuya obra se ha caracterizado por su tono satírico y filosófico. Se
+							destacan sus obras:</p>
+
+						<ul>
+							<li> El hombre de Marte (1946).</li>
+							<li> El hospital de la transfiguración (1948).</li>
+							<li> Los astronautas (1951).</li>
+							<li> Tiempo no derrochado o aprovechado (1955).</li>
+							<li>Diálogos (1957).</li>
+							<li> La invasión de Aldebarán (1959).</li>
+							<li>Eden (1959).</li>
+							<li>Retorno de las estrellas (1961).</li>
+							<li>Memorias encontradas en una bañera (1961).</li>
+							<li>Solaris (1961).</li>
+							<li>Fábulas de robots (1964).</li>
+							<li>El Invencible (1964).</li>
+							<li>Relatos del piloto Pirx (1968).</li>
+							<li>Diarios de las estrellas. Viajes (1971).</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="autorF-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Karel Capek</span>
+						</div>
+						<div style="color: brown;">
+							(1890-1938 Bohemia, República Checa)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Fue uno de los escritores en lengua checa más importantes del siglo XX. Acuñó el concepto de
+							“robot”. Sus principales escritos son:</p>
+						<ol>
+							<li>R.U.R (1921). </li>
+							<li>De la vida de los insectos o el juego de los insectos (1921).</li>
+							<li>La fábrica de absoluto (1922).</li>
+							<li>Adán el creador (1927).</li>
+							<li>La guerra de las salamandras (1936). </li>
+							<li>Viaje a España (1930).</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div id="autorG-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Isaac Asimov</span>
+						</div>
+						<div style="color: brown;">
+							(1920-1992 Smoliensk, Rusia)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Fue escritor y bioquímico con nacionalidad rusa y estadounidense. Es uno de los precursores
+							de la literatura de ciencia ficción. Sus obras se han adaptado en buen número al cine. Entre
+							sus principales escritos, contamos con: </p>
+						<ul>
+							<li>Un guijarro en el cielo (1950).</li>
+							<li>Fundación. Foundation (1951).</li>
+							<li>Las corrientes del espacio. The Currents of Space (1952).</li>
+							<li>Ranger del espacio (1952).</li>
+							<li>Los piratas de los asteroides (1953).</li>
+							<li>El fin de la eternidad. The End of Eternity (1955).</li>
+							<li>El sol desnudo (1957).</li>
+							<li>Las lunas de Júpiter (1957).</li>
+							<li>Viaje Alucinante (1966).</li>
+							<li>Los propios dioses (1972).</li>
+							<li>Los robots del amanecer (1983).</li>
+							<li>Robots e Imperio. Robots and Empire (1985).</li>
+							<li>Sueños de Robot (1986).</li>
+							<li>Némesis (1989).</li>
+							<li>Anochecer (1990).</li>
+							<li>Visiones de Robot (1991).</li>
+							<li>Hacia la Fundación.(póstuma) (1993).</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="autorH-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Gilbert Keith Chesterton</span>
+						</div>
+						<div style="color: brown;">
+							(1874 - 1963, Londres, Inglaterra)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Escritor británico que se enfocó, entre otros géneros, en el ensayo, la narración, la
+							biografía, la lírica, el periodismo y el libro de viajes.<br><br>
+							Al comienzo de su carrera se hizo conocido por sus artículos periodísticos.<br><br>
+
+							Entre sus obras más importantes podemos encontrar:</p>
+						<ul>
+							<li>El napoleón de Notting Hill (1904). </li>
+							<li>Dickens (1906). </li>
+							<li>G.B. Shaw (1909).</li>
+							<li>Ortodoxia (1908). </li>
+							<li>La Esfera y la Cruz (1910).</li>
+							<li>Qué está mal en el mundo (1910).</li>
+							<li>El hombre eterno (1925).</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="autorH-incompleto-mobile"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>George Simenon</span>
+							</div>
+							<div style="color: brown;">
+								(1903 - 1989 Lieja, Bélgica)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue un novelista de una fecundidad extraordinaria, con 192 novelas publicadas bajo su
+								nombre y una treintena de obras aparecidas bajo 27 seudónimos.<br><br>
+								Algunas de sus producciones son: </p>
+							<ul>
+								<li>Pietr el letón (Pietr-le-Letton) (1931).</li>
+								<li>El difunto filántropo (M. Galletdécédé) (1931).</li>
+								<li>El ahorcado de la iglesia (Le pendu de Saint-Pholien) (1931).</li>
+								<li>El asesino del canal (Le charretier de la Providence) (1931).</li>
+								<li>La cabeza de un hombre (La têted’unhomme (1931).</li>
+								<li>El perro canelo (Le chienjaune) (1931).</li>
+								<li>Crimen en Holanda (Un crime en Hollande) (1931).</li>
+								<li>La taberna del puerto (Au rendez-vous des Terre-Neuves) (1931).</li>
+								<li>La amargura del condenado (La guinguette à deuxsous) (1932).</li>
+								<li>El puerto de las brumas (Le port des brumes) (1932).</li>
+								<li>La sombra chinesca (L’ombrechinoise) (1932).</li>
+								<li>Entre los flamencos (Chez les Flamands) (1932).</li>
+								<li>Liberty bar (Liberty Bar) (1937).</li>
+								<li>La esclusa número uno (L’écluse no. 1) (1933).</li>
+								<li>Maigret (Maigret) (1934).</li>
+								<li>Los sótanos del Majestic (Les caves du Majestic) (1939).</li>
+								<li>La casa del juez (La maison du juge) (1940).</li>
+								<li>Una extraña sirvienta (Félicieestlà) (1941).</li>
+								<li>El inspector cadáver (L’InspecteurCadavre) (1941).</li>
+								<li>Maigret en la escuela (Maigret à l’école) (1953).</li>
+								<li>Una confidencia de Maigret (Une confidence de Maigret) (1959).</li>
+								<li>Maigret y el mayorista de vinos (Maigret et le marchand de vin) (1969).</li>
+								<li>Maigret y el confidente (Maigret et l’indicateur) (1971).</li>
+								<li>Maigret y Monsieur Charles (Maigret et Monsieur Charles) (1972).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<div id="autorJ-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Aldonus Huxley</span>
+						</div>
+						<div style="color: brown;">
+							(1894 - 1963 Surrey, Inglaterra)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Conocido por sus novelas y su gran abanico de ensayos, publicó, también, relatos cortos,
+							poesía, libros de viaje y guiones para películas. Entre otras obras, se destacan:</p>
+						<ul>
+							<li>Los escándalos de Crome (1921).</li>
+							<li>Danza de sátiros (1923).</li>
+							<li>Arte, amor y todo lo demás (1925).</li>
+							<li>Contrapunto (1928).</li>
+							<li>Un mundo feliz (1932).</li>
+							<li>Ciego en Gaza (1936).</li>
+							<li>Viejo muere el cisne (1939).</li>
+							<li>El tiempo debe detenerse (1944).</li>
+							<li>Mono y esencia (1948).</li>
+							<li>El Genio y la Diosa (1955).</li>
+							<li>La isla (1962).</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<div id="autorK-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Robert Louis Stevenson</span>
+						</div>
+						<div style="color: brown;">
+							(1850 - 1894 Edimburgo, Escocia)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Fue novelista, poeta y ensayista. Su legado es una vasta obra que incluye crónicas de viaje,
+							novelas de aventuras e históricas, así como lírica y ensayos.<br><br>
+							Sus obras más importantes son:</p>
+
+						<ul>
+							<li>La isla del tesoro (1883).</li>
+							<li>La flecha negra (1883).</li>
+							<li>Prince Otto (1885).</li>
+							<li>El extraño caso del DrJekyll y Mr Hyde (1886).</li>
+							<li>Kidnapped (1886).</li>
+							<li>The Master of Ballantrae (1888).</li>
+							<li>The Wrong Box (1889).</li>
+							<li>The Wrecker (1892).</li>
+							<li>Catriona (1893).</li>
+						</ul>
+					</div>
+					<div class="contenedor-pdf">
+						<a href="./assets/pdf/LaFlechaNegra.pdf" target="_blank"><img src="./assets/img/pdf.svg"
+								class="imagen-pdf" alt="Descargar Pdf"> </a>
+						<p><b>Consultar Obra</b></p>
+					</div>
+				</div>
+			</div>
+			<div id="autorL-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Arthur Conan Doyle</span>
+						</div>
+						<div style="color: brown;">
+							(1859 - 1930, Edimburgo, Escocia)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Fue un escritor británico célebre por la creación del personaje Sherlock Holmes, el detective
+							de ficción más famoso del mundo.<br><br>
+
+							Entre sus obras más importantes podemos encontrar :</p>
+
+						<ul>
+							<li>El relato de J. HabakukJephson (1884).</li>
+							<li>El gran experimento de Keinplatz (1890).</li>
+							<li>La tragedia del Korosko (1898). </li>
+							<li>La nueva revelación (1918).</li>
+							<li>El mensaje vital (1919).</li>
+							<li>Cuentos de la penumbra y lo invisible (1919).</li>
+							<li>El misterio de las hadas (1921).</li>
+							<li>El hombre de Arkángel (1925).</li>
+							<li>El abismo de Maracot (1929).</li>
+						</ul>
+					</div>
+					<div class="contenedor-pdf">
+						<a href="./assets/pdf/LaCoronadeBerilos.pdf" target="_blank"><img src="./assets/img/pdf.svg"
+								class="imagen-pdf" alt="Descargar Pdf"> </a>
+						<p><b>Consultar Obra</b></p>
+					</div>
+				</div>
+			</div>
+			<div id="autorM-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Arthur C. Clarke</span>
+						</div>
+						<div style="color: brown;">
+							(1917 - 2008 Minehead, Inglaterra)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Autor de obras de divulgación científica y considerado como uno de los maestros de la ciencia
+							ficción. Entre sus obras se cuentan:</p>
+						<ul>
+							<li>Odisea en el espacio (1968).</li>
+							<li>Odisea dos (1982).</li>
+							<li>Odisea tres (1987).</li>
+							<li>Odisea final (1996).</li>
+							<li>Cita con Rama (1973).</li>
+							<li>A la caída de la noche (1946).</li>
+							<li>El león de Comarre (1948).</li>
+							<li>Preludio al espacio (1951).</li>
+							<li>Las arenas de Marte (1951).</li>
+							<li>Islas en el cielo (1952).</li>
+							<li>El fin de la infancia (1953).</li>
+							<li>La ciudad y las estrellas (1956).</li>
+							<li>Regreso a Titán (1975).</li>
+							<li>Fuentes del paraíso (1979).</li>
+							<li>El espectro del Titanic (1990).</li>
+							<li>El martillo de Dios (1993).</li>
+							<li>Luz de otros tiempos.</li>
+							<li>El ojo del tiempo (2007).</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="autorN-completo-Mobile"
+				class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Oscar Wilde</span>
+						</div>
+						<div style="color: brown;">
+							(1854 - 1900 Dublín, Irlanda)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Fue un destacado escritor, poeta y dramaturgo.<br><br>
+
+							Sus obras más importantes son:</p>
+						<ul>
+							<li>El retrato de Dorian Gray (su única novela; 1891).</li>
+							<li>El crimen de Lord Arthur Saville y otras historias (1891).</li>
+							<li>El fantasma de Canterville (1887).</li>
+							<li>La esfinge sin secreto (1891).</li>
+							<li>El modelo millonario.</li>
+							<li>De profundis (1905).</li>
+						</ul>
+					</div>
+					<div class="contenedor-pdf">
+						<a href="./assets/pdf/ElfantasmadeCanterville.pdf" target="_blank"><img
+								src="./assets/img/pdf.svg" class="imagen-pdf" alt="Descargar Pdf"> </a>
+						<p><b>Consultar Obra</b></p>
+					</div>
+				</div>
+			</div>
+			<div id="autorO-completo-Mobile"
+				class="elementos-mapa-over  animate__animated animate__fadeInUp animate__faster">
+				<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+					<div class="titulo">
+						<div>
+							<span>Lewis Carroll</span>
+						</div>
+						<div style="color: brown;">
+							(1832 - 1898 Daresbury, Inglaterra)
+						</div>
+					</div>
+					<div class="texto">
+						<p>Aparte de cultivar la escritura, fue lógico, matemático, fotógrafo y escritor. Sus obras más
+							conocidas son:</p>
+						<ul>
+							<li>Alicia en el país de las maravillas (1865). </li>
+							<li>Alicia a través del espejo (1872).</li>
+							<li>La caza del snark (1875).</li>
+							<li>El juego de la lógica (1876).</li>
+							<li>Silvia y Bruno (1889).</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="contenedor-presentacion">
+		<div class="contenido-actividad-bienvenida">
+			<div style="text-align: center;">
+				<img src="./assets/Img/titulo.png" alt="logo: titulo">
+			</div>
+
+			<div class="texto-bienvenida">
+
+				<div class="texto-bienvenida-imagen" style="text-align: center;">
+					<img src="./assets/Img/Libro.png" width="300px" class="responsive">
+				</div>
+				<div class="texto-bienvenida-imagen-title" style="text-align: justify;">
+					<div style="text-align: center;">
+						<img src="./assets/Img/TituloActividad.png" width="120px">
+					</div>
+
+					<p>A continuación encontraras en el mapa del mundo novelistas famosos y vas a poder observar y
+						consultar información acerca de sus vidas.
+					</p>
+				</div>
+
+			</div>
+			<div class="contenedor-boton-bienvenida">
+				<div class="button" onclick="InicioActividad()">Comenzar</div>
+			</div>
+
+		</div>
+
+		<div class="contenedor-bienvenida">
+			<div class="contenedor-mapa">
+				<object type="image/svg+xml" data="./assets/img/fondo.svg" id="mapa-bienvenida"
+					class="responsive-imagen-bienvenida">
+
+				</object>
+			</div>
+			<div class="recuadro-autores animate__animated animate__fadeInUp">
+				<div id="autorA-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Rudyard Kipling</span>
+							</div>
+							<div style="color: brown;">
+								(1865 - 1936 Bombay, India)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue un escritor y poeta británico nacido en la India. Autor de relatos, cuentos
+								infantiles,
+								novelista y poeta, se le recuerda por sus relatos y poemas sobre los soldados británicos
+								en
+								la India y la defensa del imperialismo occidental, así como por sus cuentos infantiles.
+								Se
+								destacan sus obras:</p>
+							<ul>
+								<li>Cuarteto (1884).</li>
+								<li>Cuentos de las colinas (1888).</li>
+								<li>De un mar a otro (1889).</li>
+								<li>La luz que se apaga (1891).</li>
+								<li>Mandalay (1892).</li>
+								<li>El libro de la selva (1894).</li>
+								<li>Los constructores de puentes (1898).</li>
+								<li>De mar a mar (1899).</li>
+								<li>Acción y reacción (1909).</li>
+								<li>El libro de las palabras (1928).</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="contenedor-pdf">
+						<a href="./assets/pdf/LosConstructores.pdf" target="_blank"><img src="./assets/img/pdf.svg"
+								style="width: 15vh;" alt="Descargar Pdf"> </a>
+						<p><b>Consultar Obra</b></p>
+					</div>
+				</div>
+				<div id="autorB-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Ray Bradbury</span>
+							</div>
+							<div style="color: brown;">
+								(1920 Illinois, Estados Unidos)
+							</div>
+						</div>
+						<div class="texto">
+
+							<p>Es un escritor del género fantástico, del terror y de la ciencia ficción. Principalmente
+								conocido por sus obras: </p>
+							<ul>
+								<li>Crónicas marcianas (1950).</li>
+								<li>Fahrenheit 451 (1953).</li>
+								<li>El vino del estío (1957).</li>
+								<li>La feria de las tinieblas (1962).</li>
+								<li>El árbol de las brujas (1972).</li>
+								<li>La muerte es un asunto solitario (1985).</li>
+								<li>Cementerio para lunáticos (1990).</li>
+								<li>El ruido de un Trueno (1990).</li>
+								<li>Sombras verdes, ballena blanca (1992).</li>
+								<li>El verano de la despedida (2006).</li>
+								<li>Ahora y siempre (2009).</li>
+							</ul>
+
+						</div>
+
+					</div>
+				</div>
+				<div id="autorB-incompleto"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Philip k. Dick</span>
+							</div>
+							<div style="color: brown;">
+								(1928 - 1982 Chicago, Estados Unidos)
+							</div>
+						</div>
+						<div class="texto">
+
+							<p>Fue un prolífico escritor y novelista de ciencia ficción, que influyó notablemente en
+								dicho género. Entre sus escritos tenemos: </p>
+							<ul>
+								<li>Lotería solar (1955).</li>
+								<li>El tiempo doblado (1956).</li>
+								<li>Planetas morales (1957).</li>
+								<li>Muñecos cósmicos (1957).</li>
+								<li>Tiempo desarticulado (1959).</li>
+								<li>El martillo de Vulcano (1960).</li>
+								<li>El hombre en el castillo (1962) .</li>
+								<li>Torneo mortal (1963).</li>
+								<li>Tiempo de Marte (1964).</li>
+								<li>Aguardando el año pasado (1966). </li>
+								<li>La pistola de rayos (1967).</li>
+								<li>El mundo contra reloj (1967).</li>
+								<li>¿Sueñan los androides con ovejas eléctricas (1968).</li>
+								<li>Laberinto de muerte (1970).</li>
+								<li>Podemos construirle (1972).</li>
+								<li>Fluyan mis lágrimas, dijo el policía (1974).</li>
+								<li>Una mirada a la oscuridad (1977).</li>
+								<li>La invasión divina (1981). </li>
+								<li>En busca de Milton Lumky (1985).</li>
+								<li>Humpty Dumpty in Oakland (1986).</li>
+								<li>Lies, Inc. (2004).</li>
+							</ul>
+
+						</div>
+
+					</div>
+				</div>
+				<div id="autorC-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Herman Melville</span>
+							</div>
+							<div style="color: brown;">
+								(1819 - 1891 Nueva York, Estados Unidos)
+							</div>
+						</div>
+						<div class="texto">
+
+							<p>Fue un prodigio de la novela, del ensayo y de la poesía.<br><br>
+								Sus principales obras son:</p>
+							<ul>
+								<li>Billy Budd (1924).</li>
+								<li>Typee (1846).</li>
+								<li>Mardi (1849).</li>
+								<li>Moby Dick (1851).</li>
+								<li>Omoo (1847).</li>
+								<li>Bartleby, el escribiente (1856).</li>
+								<li>Chaqueta blanca (1850).</li>
+							</ul>
+						</div>
+						<div class="contenedor-pdf">
+							<a href="./assets/pdf/BartlebyElEscribiente.pdf" target="_blank"><img
+									src="./assets/img/pdf.svg" style="width: 15vh;" alt="Descargar Pdf"> </a>
+							<p><b>Consultar Obra</b></p>
+						</div>
+
+					</div>
+				</div>
+				<div id="autorD-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Joseph Conrad</span>
+							</div>
+							<div style="color: brown;">
+								(1857 - 1924 Berdyczów, entonces Polonia, actual Ucrania)
+							</div>
+						</div>
+						<div class="texto">
+
+							<p>Fue un novelista polaco que adoptó el inglés como lengua literaria.<br><br>
+								Sus obras más importantes son:</p>
+							<ul>
+								<li>La locura de Almayer (Almayer'sFolly) (1895).</li>
+								<li>Una avanzada del progreso (An Outpost of Progress) (1896).</li>
+								<li>El negro del Narciso (The Nigger of the 'Narcissus') (1897).</li>
+								<li>El corazón de las tinieblas (Heart of Darkness) (1899).</li>
+								<li>Lord Jim (1900).</li>
+								<li>Los herederos (The Inheritors) (1901).con Ford Madox Ford</li>
+								<li>Tifón (Typhoon) (comenzado en 1899 y publicado en PallMall Magazine en 1902).</li>
+								<li>Con la soga al cuello "TheEnd of theTether" (1902).</li>
+								<li>Nostromo (1904).</li>
+								<li>El duelo (1907).</li>
+								<li>Bajo la mirada de Occidente (Under Western Eyes) (1911).</li>
+								<li>Crónica personal (A Personal Record) (1912).</li>
+								<li>Chance (1913).</li>
+								<li>Victoria (Victory) (1915).</li>
+								<li>La línea de sombra (The Shadow Line) (1917).</li>
+								<li>La flecha de oro (TheArrow of Gold) (1919).</li>
+								<li>Salvamento (TheRescue) (1920).</li>
+								<li>El pirata (TheRover) (1923).</li>
+								<li>El alma del guerrero (TheWarrior'sSoul) (1925).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="autorE-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Stanislaw Lem</span>
+							</div>
+							<div style="color: brown;">
+								(1921 - 2006 Lwów, entonces Polonia, actual Ucrania)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue un escritor polaco cuya obra se ha caracterizado por su tono satírico y filosófico.
+								Se
+								destacan sus obras:</p>
+
+							<ul>
+								<li> El hombre de Marte (1946).</li>
+								<li> El hospital de la transfiguración (1948).</li>
+								<li> Los astronautas (1951).</li>
+								<li> Tiempo no derrochado o aprovechado (1955).</li>
+								<li>Diálogos (1957).</li>
+								<li> La invasión de Aldebarán (1959).</li>
+								<li>Eden (1959).</li>
+								<li>Retorno de las estrellas (1961).</li>
+								<li>Memorias encontradas en una bañera (1961).</li>
+								<li>Solaris (1961).</li>
+								<li>Fábulas de robots (1964).</li>
+								<li>El Invencible (1964).</li>
+								<li>Relatos del piloto Pirx (1968).</li>
+								<li>Diarios de las estrellas. Viajes (1971).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="autorF-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Karel Capek</span>
+							</div>
+							<div style="color: brown;">
+								(1890-1938 Bohemia, República Checa)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue uno de los escritores en lengua checa más importantes del siglo XX. Acuñó el concepto
+								de
+								“robot”. Sus principales escritos son:</p>
+							<ol>
+								<li>R.U.R (1921). </li>
+								<li>De la vida de los insectos o el juego de los insectos (1921).</li>
+								<li>La fábrica de absoluto (1922).</li>
+								<li>Adán el creador (1927).</li>
+								<li>La guerra de las salamandras (1936). </li>
+								<li>Viaje a España (1930).</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div id="autorG-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Isaac Asimov</span>
+							</div>
+							<div style="color: brown;">
+								(1920-1992 Smoliensk, Rusia)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue escritor y bioquímico con nacionalidad rusa y estadounidense. Es uno de los
+								precursores
+								de la literatura de ciencia ficción. Sus obras se han adaptado en buen número al cine.
+								Entre
+								sus principales escritos, contamos con: </p>
+							<ul>
+								<li>Un guijarro en el cielo (1950).</li>
+								<li>Fundación. Foundation (1951).</li>
+								<li>Las corrientes del espacio. The Currents of Space (1952).</li>
+								<li>Ranger del espacio (1952).</li>
+								<li>Los piratas de los asteroides (1953).</li>
+								<li>El fin de la eternidad. The End of Eternity (1955).</li>
+								<li>El sol desnudo (1957).</li>
+								<li>Las lunas de Júpiter (1957).</li>
+								<li>Viaje Alucinante (1966).</li>
+								<li>Los propios dioses (1972).</li>
+								<li>Los robots del amanecer (1983).</li>
+								<li>Robots e Imperio. Robots and Empire (1985).</li>
+								<li>Sueños de Robot (1986).</li>
+								<li>Némesis (1989).</li>
+								<li>Anochecer (1990).</li>
+								<li>Visiones de Robot (1991).</li>
+								<li>Hacia la Fundación.(póstuma) (1993).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="autorH-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Gilbert Keith Chesterton</span>
+							</div>
+							<div style="color: brown;">
+								(1874 - 1963, Londres, Inglaterra)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Escritor británico que se enfocó, entre otros géneros, en el ensayo, la narración, la
+								biografía, la lírica, el periodismo y el libro de viajes.<br><br>
+								Al comienzo de su carrera se hizo conocido por sus artículos periodísticos.<br><br>
+
+								Entre sus obras más importantes podemos encontrar:</p>
+							<ul>
+								<li>El napoleón de Notting Hill (1904). </li>
+								<li>Dickens (1906). </li>
+								<li>G.B. Shaw (1909).</li>
+								<li>Ortodoxia (1908). </li>
+								<li>La Esfera y la Cruz (1910).</li>
+								<li>Qué está mal en el mundo (1910).</li>
+								<li>El hombre eterno (1925).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="autorH-incompleto"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>George Simenon</span>
+							</div>
+							<div style="color: brown;">
+								(1903 - 1989 Lieja, Bélgica)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue un novelista de una fecundidad extraordinaria, con 192 novelas publicadas bajo su
+								nombre y una treintena de obras aparecidas bajo 27 seudónimos.<br><br>
+								Algunas de sus producciones son: </p>
+							<ul>
+								<li>Pietr el letón (Pietr-le-Letton) (1931).</li>
+								<li>El difunto filántropo (M. Galletdécédé) (1931).</li>
+								<li>El ahorcado de la iglesia (Le pendu de Saint-Pholien) (1931).</li>
+								<li>El asesino del canal (Le charretier de la Providence) (1931).</li>
+								<li>La cabeza de un hombre (La têted’unhomme (1931).</li>
+								<li>El perro canelo (Le chienjaune) (1931).</li>
+								<li>Crimen en Holanda (Un crime en Hollande) (1931).</li>
+								<li>La taberna del puerto (Au rendez-vous des Terre-Neuves) (1931).</li>
+								<li>La amargura del condenado (La guinguette à deuxsous) (1932).</li>
+								<li>El puerto de las brumas (Le port des brumes) (1932).</li>
+								<li>La sombra chinesca (L’ombrechinoise) (1932).</li>
+								<li>Entre los flamencos (Chez les Flamands) (1932).</li>
+								<li>Liberty bar (Liberty Bar) (1937).</li>
+								<li>La esclusa número uno (L’écluse no. 1) (1933).</li>
+								<li>Maigret (Maigret) (1934).</li>
+								<li>Los sótanos del Majestic (Les caves du Majestic) (1939).</li>
+								<li>La casa del juez (La maison du juge) (1940).</li>
+								<li>Una extraña sirvienta (Félicieestlà) (1941).</li>
+								<li>El inspector cadáver (L’InspecteurCadavre) (1941).</li>
+								<li>Maigret en la escuela (Maigret à l’école) (1953).</li>
+								<li>Una confidencia de Maigret (Une confidence de Maigret) (1959).</li>
+								<li>Maigret y el mayorista de vinos (Maigret et le marchand de vin) (1969).</li>
+								<li>Maigret y el confidente (Maigret et l’indicateur) (1971).</li>
+								<li>Maigret y Monsieur Charles (Maigret et Monsieur Charles) (1972).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="autorJ-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Aldonus Huxley</span>
+							</div>
+							<div style="color: brown;">
+								(1894 - 1963 Surrey, Inglaterra)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Conocido por sus novelas y su gran abanico de ensayos, publicó, también, relatos cortos,
+								poesía, libros de viaje y guiones para películas. Entre otras obras, se destacan:</p>
+							<ul>
+								<li>Los escándalos de Crome (1921).</li>
+								<li>Danza de sátiros (1923).</li>
+								<li>Arte, amor y todo lo demás (1925).</li>
+								<li>Contrapunto (1928).</li>
+								<li>Un mundo feliz (1932).</li>
+								<li>Ciego en Gaza (1936).</li>
+								<li>Viejo muere el cisne (1939).</li>
+								<li>El tiempo debe detenerse (1944).</li>
+								<li>Mono y esencia (1948).</li>
+								<li>El Genio y la Diosa (1955).</li>
+								<li>La isla (1962).</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+
+				<div id="autorK-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Robert Louis Stevenson</span>
+							</div>
+							<div style="color: brown;">
+								(1850 - 1894 Edimburgo, Escocia)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue novelista, poeta y ensayista. Su legado es una vasta obra que incluye crónicas de
+								viaje,
+								novelas de aventuras e históricas, así como lírica y ensayos.<br><br>
+								Sus obras más importantes son:</p>
+
+							<ul>
+								<li>La isla del tesoro (1883).</li>
+								<li>La flecha negra (1883).</li>
+								<li>Prince Otto (1885).</li>
+								<li>El extraño caso del DrJekyll y Mr Hyde (1886).</li>
+								<li>Kidnapped (1886).</li>
+								<li>The Master of Ballantrae (1888).</li>
+								<li>The Wrong Box (1889).</li>
+								<li>The Wrecker (1892).</li>
+								<li>Catriona (1893).</li>
+							</ul>
+						</div>
+						<div class="contenedor-pdf">
+							<a href="./assets/pdf/LaFlechaNegra.pdf" target="_blank"><img src="./assets/img/pdf.svg"
+									style="width: 15vh;" alt="Descargar Pdf"> </a>
+							<p><b>Consultar Obra</b></p>
+						</div>
+					</div>
+				</div>
+				<div id="autorL-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Arthur Conan Doyle</span>
+							</div>
+							<div style="color: brown;">
+								(1859 - 1930, Edimburgo, Escocia)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue un escritor británico célebre por la creación del personaje Sherlock Holmes, el
+								detective
+								de ficción más famoso del mundo.<br><br>
+
+								Entre sus obras más importantes podemos encontrar :</p>
+
+							<ul>
+								<li>El relato de J. HabakukJephson (1884).</li>
+								<li>El gran experimento de Keinplatz (1890).</li>
+								<li>La tragedia del Korosko (1898). </li>
+								<li>La nueva revelación (1918).</li>
+								<li>El mensaje vital (1919).</li>
+								<li>Cuentos de la penumbra y lo invisible (1919).</li>
+								<li>El misterio de las hadas (1921).</li>
+								<li>El hombre de Arkángel (1925).</li>
+								<li>El abismo de Maracot (1929).</li>
+							</ul>
+						</div>
+						<div class="contenedor-pdf">
+							<a href="./assets/pdf/LaCoronadeBerilos.pdf" target="_blank"><img src="./assets/img/pdf.svg"
+									style="width: 15vh;" alt="Descargar Pdf"> </a>
+							<p><b>Consultar Obra</b></p>
+						</div>
+					</div>
+				</div>
+				<div id="autorM-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Arthur C. Clarke</span>
+							</div>
+							<div style="color: brown;">
+								(1917 - 2008 Minehead, Inglaterra)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Autor de obras de divulgación científica y considerado como uno de los maestros de la
+								ciencia
+								ficción. Entre sus obras se cuentan:</p>
+							<ul>
+								<li>Odisea en el espacio (1968).</li>
+								<li>Odisea dos (1982).</li>
+								<li>Odisea tres (1987).</li>
+								<li>Odisea final (1996).</li>
+								<li>Cita con Rama (1973).</li>
+								<li>A la caída de la noche (1946).</li>
+								<li>El león de Comarre (1948).</li>
+								<li>Preludio al espacio (1951).</li>
+								<li>Las arenas de Marte (1951).</li>
+								<li>Islas en el cielo (1952).</li>
+								<li>El fin de la infancia (1953).</li>
+								<li>La ciudad y las estrellas (1956).</li>
+								<li>Regreso a Titán (1975).</li>
+								<li>Fuentes del paraíso (1979).</li>
+								<li>El espectro del Titanic (1990).</li>
+								<li>El martillo de Dios (1993).</li>
+								<li>Luz de otros tiempos.</li>
+								<li>El ojo del tiempo (2007).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="autorN-completo"
+					class="elementos-mapa-over animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Oscar Wilde</span>
+							</div>
+							<div style="color: brown;">
+								(1854 - 1900 Dublín, Irlanda)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Fue un destacado escritor, poeta y dramaturgo.<br><br>
+
+								Sus obras más importantes son:</p>
+							<ul>
+								<li>El retrato de Dorian Gray (su única novela; 1891).</li>
+								<li>El crimen de Lord Arthur Saville y otras historias (1891).</li>
+								<li>El fantasma de Canterville (1887).</li>
+								<li>La esfinge sin secreto (1891).</li>
+								<li>El modelo millonario.</li>
+								<li>De profundis (1905).</li>
+							</ul>
+						</div>
+						<div class="contenedor-pdf">
+							<a href="./assets/pdf/ElfantasmadeCanterville.pdf" target="_blank"><img
+									src="./assets/img/pdf.svg" style="width: 15vh;" alt="Descargar Pdf"> </a>
+							<p><b>Consultar Obra</b></p>
+						</div>
+					</div>
+				</div>
+				<div id="autorO-completo"
+					class="elementos-mapa-over  animate__animated animate__fadeInUp animate__faster">
+					<div class="texto-descripcion-imagen1 animate__animated animate__fadeIn animate__faster">
+						<div class="titulo">
+							<div>
+								<span>Lewis Carroll</span>
+							</div>
+							<div style="color: brown;">
+								(1832 - 1898 Daresbury, Inglaterra)
+							</div>
+						</div>
+						<div class="texto">
+							<p>Aparte de cultivar la escritura, fue lógico, matemático, fotógrafo y escritor. Sus obras
+								más
+								conocidas son:</p>
+							<ul>
+								<li>Alicia en el país de las maravillas (1865). </li>
+								<li>Alicia a través del espejo (1872).</li>
+								<li>La caza del snark (1875).</li>
+								<li>El juego de la lógica (1876).</li>
+								<li>Silvia y Bruno (1889).</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+
+	<script>
+		/* you can pass in options here */
+		var PleaseRotateOptions = {
+			startOnPageLoad: true,
+			onHide: function () { },
+			onShow: function () { },
+			forcePortrait: false,
+			message: "Por favor gira el dispositivo para realizar la actividad.",
+			subMessage: "",
+			allowClickBypass: false,
+			onlyMobile: true,
+			zIndex: 9999999,
+			iconNode: null
+		};
+	</script>
+
+
+
+	<script src="./src/pleaserotate.min.js"></script>
+	<script src="src/index.js">
+	</script>
+</body>
+
+</html>

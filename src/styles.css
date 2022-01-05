@@ -1,0 +1,1069 @@
+body {
+  font-family: Calibri;
+  font-size: 1em;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  background-color: #59AAD3
+}
+
+h1,
+h2,
+h3 {
+  font-size: 1.5em;
+}
+
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.responsive-imagen-bienvenida {
+  width: 100%;
+  height: auto;
+}
+
+.recuadro-texto-mapa {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.recuadro-autores {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: 35vh;
+  /* border: 4px solid red; */
+  position: absolute;
+  bottom: 0px;
+  /*  background-color: rgba(255, 255, 255, 0.358) */
+}
+
+#autorA-completo,
+#autorB-completo,
+#autorB-incompleto,
+#autorC-completo,
+#autorD-completo,
+#autorE-completo,
+#autorF-completo,
+#autorG-completo,
+#autorH-completo,
+#autorH-incompleto,
+#autorJ-completo,
+#autorK-completo,
+#autorL-completo,
+#autorM-completo,
+#autorN-completo,
+#autorO-completo {
+  display: none
+}
+
+#autorA-completo-Mobile,
+#autorB-completo-Mobile,
+#autorB-incompleto-Mobile,
+#autorC-completo-Mobile,
+#autorD-completo-Mobile,
+#autorE-completo-Mobile,
+#autorF-completo-Mobile,
+#autorG-completo-Mobile,
+#autorH-completo-Mobile,
+#autorH-incompleto-Mobile,
+#autorJ-completo-Mobile,
+#autorK-completo-Mobile,
+#autorL-completo-Mobile,
+#autorM-completo-Mobile,
+#autorN-completo-Mobile,
+#autorO-completo-Mobile {
+  display: none
+}
+
+#autorA-completo {
+  height: 100%;
+  background-image: url(../assets/img/RudyardKipling.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorB-completo {
+  height: 100%;
+  background-image: url(../assets/img/Raybradbury.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorB-incompleto {
+  height: 100%;
+  background-image: url(../assets/img/PhilipkDisk.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorC-completo {
+  height: 100%;
+  background-image: url(../assets/img/HermanMelville.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+#autorD-completo {
+  height: 100%;
+  background-image: url(../assets/img/JosophConrad.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorE-completo {
+  height: 100%;
+  background-image: url(../assets/img/StanislawLem.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorF-completo {
+  height: 100%;
+  background-image: url(../assets/img/KarelCapek.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorG-completo {
+  height: 100%;
+  background-image: url(../assets/img/IsaacAsinov.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorH-completo {
+  height: 100%;
+  background-image: url(../assets/img/GilbertKeith.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorH-incompleto {
+  height: 100%;
+  background-image: url(../assets/img/GeorgeSimenon.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorJ-completo {
+  height: 100%;
+  background-image: url(../assets/img/AldousHuxley.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorK-completo {
+  height: 100%;
+  background-image: url(../assets/img/Robertloius.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorL-completo {
+  height: 100%;
+  background-image: url(../assets/img/ArthurConanDoyle.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorM-completo {
+  height: 100%;
+  background-image: url(../assets/img/Arturc.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorN-completo {
+  height: 100%;
+  background-image: url(../assets/img/OscarWilde.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorO-completo {
+  height: 100%;
+  background-image: url(../assets/img/LewisCarroll.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contenedor-pdf {
+  position: absolute;
+  right: 17vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-size: 1.3em;
+}
+
+
+/* Autores mobile*/
+#autorA-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/RudyardKipling.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorB-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/Raybradbury.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorB-incompleto-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/PhilipkDisk.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorC-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/HermanMelville.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+#autorD-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/JosophConrad.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorE-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/StanislawLem.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorF-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/KarelCapek.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorG-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/IsaacAsinov.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorH-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/GilbertKeith.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorH-incompleto-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/GeorgeSimenon.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorJ-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/AldousHuxley.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorK-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/Robertloius.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorL-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/ArthurConanDoyle.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorM-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/Arturc.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorN-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/OscarWilde.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#autorO-completo-Mobile {
+  height: 100%;
+  background-image: url(../assets/img/LewisCarroll.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.texto {
+  text-align: justify;
+  width: 374px;
+  overflow-y: auto;
+  padding: 10px 9px;
+  margin-top: -3px;
+  font-size: 1.2em;
+  height: 11vh;
+  color: black;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 22px;
+  font-weight: 800;
+}
+
+span {
+  font-size: 1.3em;
+  color: black;
+  font-style: italic;
+}
+
+/* Tamaño del scroll */
+.texto::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Estilos barra (thumb) de scroll */
+.texto::-webkit-scrollbar-thumb {
+  background: #E2A131;
+  border-radius: 4px;
+}
+
+.texto::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+.texto::-webkit-scrollbar-thumb:hover {
+  background: #cca156;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.texto::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+.texto::-webkit-scrollbar-track:hover,
+.texto::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+.toltip {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  height: 20px;
+  z-index: 9999999;
+  border: 2px solid brown;
+  padding: 6px;
+  background-color: orange;
+  border-radius: 13px;
+}
+
+.contenedor-presentacion {
+  width: 100%;
+  height: 100vh;
+  background-color: #c0c0c057;
+  overflow: hidden;
+}
+
+.contenedor-mapa {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: block;
+}
+
+#titulo-alternativo {
+  display: none;
+}
+
+/* Fin Actividad nueva */
+
+
+
+
+
+.contenedor-bienvenida {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  background-image: url(../assets/img/fondo.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.texto-descripcion-imagen1 {
+  border-radius: 23px;
+  color: white;
+  width: 34%;
+  font-size: 0.8em;
+  height: 282px;
+  margin-left: 228px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+
+
+.contenido-actividad-bienvenida {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px auto;
+  padding: 12px;
+  opacity: 0.9;
+  background-blend-mode: hard-light;
+  display: flex;
+  animation: slideDown 3s;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+
+
+
+.elementos-mapa-over {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff9e;
+}
+
+
+
+
+
+
+
+.button {
+  width: 206px;
+  display: inline-block;
+  /*  outline: 1px solid #009b7f;
+  outline-offset: 2px; */
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 0px;
+  border: solid 2px #210540;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font: 18px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E5FFFF;
+  background-color: #c73bbb;
+  background-image: -moz-linear-gradient(top, #c73bbb 0%, #7e22c9 100%);
+  background-image: -webkit-linear-gradient(top, #c73bbb 0%, #7e22c9 100%);
+  background-image: -o-linear-gradient(top, #c73bbb 0%, #7e22c9 100%);
+  background-image: -ms-linear-gradient(top, #c73bbb 0%, #7e22c9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e22c9', endColorstr='#7e22c9', GradientType=0);
+  background-image: linear-gradient(top, #c73bbb 0%, #7e22c9 100%);
+  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  /*   margin: 23px auto; */
+  cursor: pointer
+}
+
+.button:hover {
+  width: 206px;
+  display: inline-block;
+  margin: 0px auto;
+  padding: 6px 0px;
+  border: solid 2px #210540;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font: 18px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #E5FFFF;
+  background-color: #d954ce;
+  background-image: -moz-linear-gradient(top, #d954ce 0%, #7e22c9 100%);
+  background-image: -webkit-linear-gradient(top, #d954ce 0%, #7e22c9 100%);
+  background-image: -o-linear-gradient(top, #d954ce 0%, #7e22c9 100%);
+  background-image: -ms-linear-gradient(top, #d954ce 0%, #7e22c9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e22c9', endColorstr='#7e22c9', GradientType=0);
+  background-image: linear-gradient(top, #d954ce 0%, #7e22c9 100%);
+  -webkit-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+  box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+.interno-contenedor {
+  border: 5px solid #80acc0;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px
+}
+
+.cabecera {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: row;
+  color: #134422;
+  font-weight: bold;
+}
+
+.descripcion {
+  color: #134422;
+  font-weight: bolder;
+}
+
+.titulo-imagen {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  align-content: center;
+}
+
+.texto-bienvenida {
+  width: 100vh;
+  text-align: center;
+  display: grid;
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: white;
+  padding: 32px;
+  margin-bottom: 12px;
+  border: 4px #c73bbb double;
+}
+
+
+
+.contenedor-imagen-actividad {
+  display: flex;
+  visibility: visible;
+  width: 100vw;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.responsive-imagen {
+  width: 100%;
+  height: fit-content;
+}
+
+.responsive {
+  width: 40%;
+  height: auto;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  z-index: 1;
+  align-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  /* padding: 0; */
+  width: 96%;
+  /* display: grid; */
+  /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%); */
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 62vh
+}
+
+/*Modal Mapa intrucciones */
+/* The Modal (background) */
+.modal-mapa {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  z-index: 1;
+  align-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content-mapa {
+  position: relative;
+  /* padding: 0; */
+  width: 96%;
+  /* display: grid; */
+  /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%); */
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 37vh
+}
+
+.contenedor-boton-bienvenida {
+  text-align: center;
+  width: 50%;
+  margin: 0px auto
+}
+
+
+.imagen-pdf {
+  width: 25vh
+}
+
+.UpZoom,
+.LeftZoom,
+.DownZoom,
+.RigthZoom {
+  display: none;
+  width: 26px;
+  background-color: #c9c2c2bb;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 6px;
+  filter: drop-shadow(2px 2px 1px black);
+  border-radius: 2px 2px;
+}
+
+.zoomIn,
+.zoomOut {
+  display: none;
+  width: 26px;
+  background-color: #c9c2c2bb;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 6px;
+  filter: drop-shadow(2px 2px 1px black);
+  border-radius: 2px 2px;
+}
+
+.zoomInInstru,
+.zoomOutInstru {
+  display: flex;
+  width: 26px;
+  background-color: #c9c2c2bb;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 6px;
+  filter: drop-shadow(2px 2px 1px black);
+  border-radius: 2px 2px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.UpZoomInstru,
+.LeftZoomInstru,
+.DownZoomInstru,
+.RigthZoomInstru {
+  display: block;
+  width: 26px;
+  background-color: #c9c2c2bb;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 6px;
+  filter: drop-shadow(2px 2px 1px black);
+  border-radius: 2px 2px;
+}
+
+
+
+.descripcion-actividad-mobile {
+  display: none;
+  align-items: center;
+  align-content: center;
+  height: 2vh;
+  width: 100%;
+  text-align: right;
+  justify-content: flex-end;
+  cursor: pointer
+}
+
+.instrucciones-mapa {
+
+  display: flex;
+  width: 45vw;
+  height: 47vh;
+  background-color: #ffffffe6;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 12px;
+  border: 7px double #0a1a20;
+  flex-direction: column;
+
+}
+
+
+.item-instruccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 31px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* CSS */
+  /*  .zoomIn,
+  .zoomOut {
+    display:none;
+  } */
+  .descripcion-actividad-mobile{
+    display:none
+  }
+
+
+}
+
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+
+
+  .contenido-actividad-bienvenida {
+    width: 94vh !important;
+    height: auto;
+    display: flex;
+    animation: slideDown 3s;
+
+
+  }
+
+
+
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  /* CSS */
+  .zoomIn,
+  .zoomOut {
+    display: none;
+  }
+
+  .descripcion-actividad-mobile{
+    display:none
+  }
+
+  .contenido-actividad-bienvenida {
+    height: auto;
+    width: 67%;
+    flex-direction: column;
+
+  }
+
+
+
+
+
+  .titulo-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .texto-bienvenida {
+    width: 100%;
+    text-align: center;
+    padding: 13px;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+  }
+
+
+  .texto-bienvenida-imagen-title {
+    width: 75vh
+  }
+
+  .responsive {
+    width: 70%
+  }
+
+  .titulo {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 16px;
+    font-weight: 800;
+    width: max-content;
+  }
+
+  .texto {
+    text-align: justify;
+    width: 374px;
+    overflow-y: auto;
+    padding: 10px 9px;
+    margin-top: -3px;
+    font-size: 1.2em;
+    height: 19vh;
+    color: black;
+  }
+
+  .contenedor-pdf {
+    position: absolute;
+    left: -27vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 0.8em;
+    top: 34px;
+  }
+
+  .contenedor-pdf p {
+    display: none;
+  }
+
+  .imagen-pdf {
+    width: 11vh
+  }
+
+  .instrucciones-mapa {
+    width:60vw;
+    height: 62vh
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .responsive-imagen-bienvenida {
+    width: 80%;
+    height: auto;
+  }
+
+  .contenedor-boton-bienvenida {
+    width: 100%;
+    margin: 0px auto
+  }
+
+
+
+  .contenido-actividad-bienvenida {
+
+    height: 74vh;
+    width: 90vw;
+    flex-direction: column;
+    overflow: hidden
+  }
+
+
+  .contenedor-bienvenida {
+    margin-top: 9%
+  }
+
+  .texto-bienvenida {
+    width: auto;
+  }
+
+
+  .titulo-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+  }
+
+  .texto-bienvenida-imagen-title {
+    width: min-content;
+    font-size: 0.8em;
+    text-align: center !important;
+  }
+
+  .recuadro-texto-mapa {
+    width: 100%;
+  }
+
+  .responsive {
+    width: 70%
+  }
+
+  .contenedor-imagen-actividad {
+    overflow: scroll;
+  }
+
+  .texto-descripcion-imagen1 {
+    padding: 51px;
+    text-align: justify;
+    border-radius: 23px;
+    /* background-color: #5a290c; */
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    width: 57vw;
+    font-size: 0.7em;
+    background-image: url(../assets/img/Recuadro1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 416px;
+    margin-bottom: 12px;
+    margin-left: 0px;
+  }
+
+
+
+
+}
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+  .contenedor-imagen-actividad {
+    flex-direction: column;
+  }
+
+  .contenedor-bienvenida {
+    width: 100%;
+  }
+
+}
