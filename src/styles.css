@@ -1017,6 +1017,34 @@ span {
   }
 
 
+  .titulo {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 22px;
+    font-weight: 800;
+  }
+
+  .titulo-mobile {
+    font-size: 0.8em;
+  }
+
+  .contenedor-pdf-mobile {
+    font-size: 0.7em;
+  }
+
+  .texto-descripcion-imagen1-mobile {
+    width: 64%;
+    height: 51vh;
+    margin-left: 200px;
+  }
+
+  .texto-mobile {
+    width: 64%;
+    font-size: 0.8em;
+    margin-top: 0px;
+    padding: 8px 9px;
+  }
+
 
   .titulo-imagen {
     display: flex;
