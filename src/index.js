@@ -132,7 +132,7 @@ function finAnimacion() {
     modalMapa.style.display = "flex";
   }
 
-  /* span.addEventListener('click', ocultarModal); */
+  span.addEventListener('click', ocultarModal);
   modal.addEventListener('click', ocultarModalVentana)
   modalMapa.addEventListener('click', ocultarModalVentana)
 }
@@ -258,12 +258,14 @@ function InicioActividad() {
 
 
 
+  setTimeout(() => {
+    if (!verifyMobile()) {
+      gsap.fromTo(mapaAnimacionIntroSvg, { x: 0, y: 0, scaleX: 1, scaleY: 1 }, { x: 120, y: 95, scaleX: 1.8, scaleY: 1.8, duration: 6, ease: Linear.easeNone, onComplete: finAnimacion });
+    } else {
+      gsap.fromTo(mapaAnimacionIntroSvg, { x: 0, y: 0, scaleX: 1, scaleY: 1 }, { x: 100, y: 53, scaleX: 1.8, scaleY: 1.8, duration: 6, ease: Linear.easeNone, onComplete: finAnimacion });
+    }
+  }, 1900);
 
-  if (!verifyMobile()) {
-    gsap.fromTo(mapaAnimacionIntroSvg, { x: 0, y: 0, scaleX: 1, scaleY: 1 }, { x: 120, y: 95, scaleX: 1.8, scaleY: 1.8, duration: 6, ease: Linear.easeNone, onComplete: finAnimacion });
-  } else {
-    gsap.fromTo(mapaAnimacionIntroSvg, { x: 0, y: 0, scaleX: 1, scaleY: 1 }, { x: 65, y: 53, scaleX: 1.8, scaleY: 1.8, duration: 6, ease: Linear.easeNone, onComplete: finAnimacion });
-  }
 
   /* let obj = document.getElementById('#mapa-bienvenida');
   obj.addEventListener('touchmove', function(event) {
@@ -432,7 +434,9 @@ function ocultarAutores() {
 }
 
 function ocultarAutoresMobile() {
+
   contendorAutoresTextoMobile.forEach(element => {
+    console.log(element)
     document.querySelector(`#${element}`).style.display = 'none'
   });
 }
@@ -506,10 +510,13 @@ function mostrarAutores(idCLick) {
       case 'F1':
         document.querySelector(`#autorC-completo-Mobile`).style.display = 'flex'
         break;
+      case 'F2':
+        document.querySelector(`#autorB-incompleto-Mobile`).style.display = 'flex'
+        break;
       case 'F3':
         document.querySelector(`#autorB-completo-Mobile`).style.display = 'flex'
         break;
-  
+
       case 'F4':
         document.querySelector(`#autorN-completo-Mobile`).style.display = 'flex'
         break;
