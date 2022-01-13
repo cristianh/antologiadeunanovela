@@ -991,6 +991,30 @@ span {
     font-size: 0.8em;
     text-align: center !important;
   }
+  .titulo-mobile {
+    font-size: 0.8em;
+  }
+
+  .contenedor-pdf-mobile {
+    font-size: 0.7em;
+    left: 39%;
+  }
+
+  .texto-descripcion-imagen1-mobile {
+    width: 64%;
+    height: 51vh;
+    margin-left: 200px;
+  }
+
+ 
+
+  .texto-mobile {
+    width: 64%;
+    font-size: 0.8em;
+    margin-top: 0px;
+    padding: 8px 9px;
+  }
+
 
 
 
@@ -1036,6 +1060,10 @@ span {
     width: 64%;
     height: 51vh;
     margin-left: 200px;
+  }
+
+  .contenedor-pdf-mobile {
+    left: 45%;
   }
 
   .texto-mobile {
